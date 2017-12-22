@@ -1,0 +1,29 @@
+<!-- AR.js by @jerome_etienne - github: https://github.com/jeromeetienne/ar.js - info: https://medium.com/arjs/augmented-reality-in-10-lines-of-html-4e193ea9fdbf
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/examples/vendor/aframe/build/aframe.min.js"></script>
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
+<body style='margin : 0px; overflow: hidden;'>
+	<a-scene embedded arjs='trackingMethod: best;'>
+
+	  <a-marker-camera preset='custom' type='pattern' url='path/archex-pattern-marker.patt'> 
+		  <a-image listener geometry="primitive: plane" rotation="-90 0 0" scale="3 3 3" src="http://78.media.tumblr.com/57442b11b3ffb734dc617ba8881d8a06/tumblr_ozefn0U8Kg1rb7ns9o1_1280.jpg"></a-image>
+	</a-marker-camera>
+	</a-scene>
+</body>
+
+ -->
+<!-- include ar.js for A-Frame -->
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/examples/vendor/aframe/build/aframe.min.js"></script>
+<script src="aframe-ar.js"></script>
+<body style='margin : 0px; overflow: hidden;'>
+  <a-scene embedded arjs='trackingMethod: best;'>
+	<a-assets>
+		<a-asset-item id='wolf' src='Snow_Globe_Toronto.gif'></a-asset-item>
+	</a-assets>
+   
+	<!-- define a camera which will move according to the marker position -->
+	<a-marker type='pattern' url='test.patt'>
+		<a-obj-model src="#wolf" scale="0.01 0.01 0.01"></a-obj-model>
+	</a-marker>
+	<a-entity camera></a-entity>
+  </a-scene>
+</body>

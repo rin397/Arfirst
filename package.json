@@ -1,0 +1,20 @@
+{
+  "name": "first",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "mocha --reporter list"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^1.7.10",
+    "mocha": "^4.0.1",
+    "three": "^0.89.0"
+  },
+  "dependencies": {
+    "three": "^0.84.0"
+  }
+}
